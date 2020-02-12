@@ -1,3 +1,7 @@
+import com.DoubleStrong.DecoratorPattern.AbstractComponent;
+import com.DoubleStrong.DecoratorPattern.ConcreteComponent;
+import com.DoubleStrong.DecoratorPattern.Egg;
+import com.DoubleStrong.DecoratorPattern.sausage;
 import com.DoubleStrong.SimpleFactory.Operation;
 import com.DoubleStrong.SimpleFactory.SimpleFactory;
 import com.DoubleStrong.StrategyPattern.StrategyContext;
@@ -29,5 +33,18 @@ public class test {
              double result = strategyContext.getResult(originPrice);
              System.out.println("打完折后价格为"+result);
          }
-
+//装饰者模式
+         @Test
+        public void test3() throws Exception{
+//            客户可以按照自己的想法动态的给对象添加职责
+             AbstractComponent concreteComponent = new ConcreteComponent();
+             System.out.println(concreteComponent.getMsg()+"价格"+concreteComponent.getPrice());
+//            添加职责
+             System.out.println("加鸡蛋");
+             concreteComponent=new Egg(concreteComponent);
+             System.out.println(concreteComponent.getMsg()+"价格"+concreteComponent.getPrice());
+             System.out.println("加香肠");
+             concreteComponent=new sausage(concreteComponent);
+             System.out.println(concreteComponent.getMsg()+"价格"+concreteComponent.getPrice());
+         }
     }
