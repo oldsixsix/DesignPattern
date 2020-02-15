@@ -2,10 +2,17 @@ import com.DoubleStrong.DecoratorPattern.AbstractComponent;
 import com.DoubleStrong.DecoratorPattern.ConcreteComponent;
 import com.DoubleStrong.DecoratorPattern.Egg;
 import com.DoubleStrong.DecoratorPattern.sausage;
+import com.DoubleStrong.ProxyPattern.DramticProxy.abstractSub;
+import com.DoubleStrong.ProxyPattern.DramticProxy.customizeHandler;
+import com.DoubleStrong.ProxyPattern.DramticProxy.realSub;
+import com.DoubleStrong.ProxyPattern.StaticProxy.proxySubject;
+import com.DoubleStrong.ProxyPattern.StaticProxy.realSubject;
 import com.DoubleStrong.SimpleFactory.Operation;
 import com.DoubleStrong.SimpleFactory.SimpleFactory;
 import com.DoubleStrong.StrategyPattern.StrategyContext;
 import org.junit.Test;
+
+import java.lang.reflect.Proxy;
 
 /**
  * @author Double strong
@@ -47,4 +54,20 @@ public class test {
              concreteComponent=new sausage(concreteComponent);
              System.out.println(concreteComponent.getMsg()+"价格"+concreteComponent.getPrice());
          }
+// 静态代理模式
+    @Test
+    public void test4() throws Exception{
+        proxySubject proxySubject=new proxySubject(new realSubject());
+        proxySubject.doSomething();
+
+    }
+    // 动态代理模式
+    @Test
+    public void test5() throws Exception{
+        realSub realSub=new realSub();
+        customizeHandler handler=new customizeHandler(realSub);
+//        在这里将代理对象转成抽象对象，通过代理对象实现调用真实对象的额方法并增强
+        abstractSub proxyInstance = (abstractSub)handler.getProxyInstance();
+       proxyInstance.doSomething();
+    }
     }
