@@ -3,6 +3,7 @@ package com.doublestrong.decoratorPattern;
 /**
  * @author Double strong
  * @date 2020/2/12 19:27
+ * 可以给基础对象动态添加一些职责，职责抽象类
  */
 public  abstract class Decorator extends AbstractComponent {
 //    用抽象装饰者来包装对象，首先声明包装对象

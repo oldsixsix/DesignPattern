@@ -3,6 +3,7 @@ package com.doublestrong.builderPattern;
 /**
  * @author Double strong
  * @date 2020/3/1 11:41
+
  */
 public class HumanDirector {
     private  IBuilderHuman iBuilderHuman;
@@ -11,7 +12,7 @@ public class HumanDirector {
         this.iBuilderHuman = iBuilderHuman;
     }
     public Human createHuman(){
-
+    //  指挥构造过程，指挥构造行为
         iBuilderHuman.buildHead();
         iBuilderHuman.buildBody();
         iBuilderHuman.buildHand();

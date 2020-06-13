@@ -1,6 +1,4 @@
-package com.doublestrong.observerPattern;
-
-import java.util.*;
+package com.doublestrong.observerPattern.Demo1;
 
 /**
  * @author Double strong

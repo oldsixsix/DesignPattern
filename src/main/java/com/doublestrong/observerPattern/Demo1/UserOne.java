@@ -1,4 +1,4 @@
-package com.doublestrong.observerPattern;
+package com.doublestrong.observerPattern.Demo1;
 
 /**
  * @author Double strong

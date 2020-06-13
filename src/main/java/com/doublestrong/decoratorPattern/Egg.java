@@ -5,6 +5,7 @@ package com.doublestrong.decoratorPattern;
  * @date 2020/2/12 19:27
  */
 public class Egg extends Decorator {
+//    这里调用装饰者类的方法
     public Egg(AbstractComponent abstractComponent) {
         super(abstractComponent);
     }
