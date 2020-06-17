@@ -7,7 +7,8 @@ package com.doublestrong.bridgePattern;
 public class test {
     public static void main(String[] args) {
         Pen pen=new MiddlePen();
-        pen.setColor(new Green());
+//        传入这个关联关系
+        pen.setColor(new Red());
         pen.draw("123");
     }
 }

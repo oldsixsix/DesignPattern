@@ -9,4 +9,9 @@ public class realSub implements abstractSub {
     public void doSomething() {
         System.out.println("真实对象的方法");
     }
+
+//    cglib可以实现具体类的非接口实现方法
+    public void func(){
+        System.out.println("非接口实现方法");
+    }
 }

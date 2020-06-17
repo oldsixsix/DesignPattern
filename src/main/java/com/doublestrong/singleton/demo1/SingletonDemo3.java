@@ -4,6 +4,7 @@ package com.doublestrong.singleton.demo1;
  * @author Double strong
  * @date 2020/3/5 20:31
  * DCL懒汉式
+ * 双重检查
  */
 public class SingletonDemo3 {
 

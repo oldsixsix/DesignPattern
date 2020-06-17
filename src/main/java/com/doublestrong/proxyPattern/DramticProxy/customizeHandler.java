@@ -35,7 +35,7 @@ public class customizeHandler implements InvocationHandler {
     }
 
     /**
-     *
+     * 利用反射获取被代理类的字节码文件，以及接口信息，以及自定义处理器
      * @return 返回被代理对象
      */
     public Proxy getProxyInstance(){
@@ -43,6 +43,14 @@ public class customizeHandler implements InvocationHandler {
 
     }
 
+    /**
+     * 传入被代理对象，以及被代理对象实现的方法、参数 填入代理逻辑
+     * @param proxy
+     * @param method
+     * @param args
+     * @return
+     * @throws Throwable
+     */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("开始了");

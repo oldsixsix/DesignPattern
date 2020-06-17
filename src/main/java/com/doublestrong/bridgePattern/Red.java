@@ -7,6 +7,6 @@ package com.doublestrong.bridgePattern;
 public class Red implements Color {
     @Override
     public void bePaint(String penType, String name) {
-        System.out.println("红色");
+        System.out.println(penType+"----"+name+"红色");
     }
 }
